@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Campaign Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    
+     <!--  Add a Heading or Title to Your Page -->
+    <h1>Ad Campaign Tracker</h1>
+
+    <div class="form-container">
+    <form id="campaignForm">
+    <input type="text" id ='name' placeholder="Campaign Name" required/>
+     <select id="platform">
+        <option value="All">ALL</option>
+            <option value="Google Ads">Google Ads</option>
+            <option value="Facebook Ads">Facebook Ads</option>
+            <option value="Twitter Ads">Twitter Ads</option>
+     </select>
+     <select id="status">
+      <option value="Active">Active</option>
+      <option value="Paused">Paused</option>
+    </select>
+     <input type="number" id="impressions" placeholder="Impressions" required />
+    <input type="number" id="clicks" placeholder="Clicks" required />
+    <input type="number" id="spend" placeholder="Spend" required />
+    <button type="submit">Add Campaign</button>
+</form>
+</div>
+</body>
+    <!--Add Filter Dropdowns (for Platform & Status)-->
+    <div class="filters">
+        <label for="platformFilter">platform:</label>
+        <select id="platformFilter">
+            <option value="All">ALL</option>
+            <option value="Google Ads">Google Ads</option>
+            <option value="Facebook Ads">Facebook Ads</option>
+            <option value="Twitter Ads">Twitter Ads</option>
+        </select>
+        <!-- Ends the dropdown. -->
+         <label for="statusFilter">Status</label>
+         <select id="statusFilter">
+            <option value="All">All</option>
+            <option value="Active">Active</option>
+            <option value="Paused">Paused</option>
+         </select>
+    </div>
+<!-- Search Box -->
+ <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="search campaigns...">
+    <button id="searchButton">search</button>
+ </div>
+ 
+ <!-- Campaign Display Area -->
+  <div id="campaignContainer">
+  </div>
+
+<!-- Table Format Alternative
+<table id="campaignTable">
+  <thead>
+    <tr>
+      <th>Name</th> Campaign Name -->
+      <!-- <th>Platform</th> 
+      <th>Status</th> 
+      <th>Impressions</th> 
+      <th>Clicks</th>  Clicks on ad -->
+      <!-- <th>Spend</th> 
+      <th>CTR (%)</th> 
+       </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>  -->
+<canvas id="spendChart" width="400" height="200"></canvas>
+<footer>
+    <p>&copy;2025 Ad Campaign Tracker.All rights reserved</p>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
